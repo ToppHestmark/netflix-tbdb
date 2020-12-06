@@ -1,3 +1,7 @@
 # NETFLIX
 
-Cloning netflix with TMBD API data.
+Cloning netflix with TMDb API data.
+
+Dependencies
+- Axios
+- Styled components
