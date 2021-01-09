@@ -16,8 +16,8 @@ export default function Row({ title, fetchURL, isLargerRow }) {
         const request = await axios.get(fetchURL);
         setMovies(request.data.results);
         return request;
-      } catch (err) {
-        console.log(err.message);
+      } catch (error) {
+        return error;
       }
     }
     fetchData();
@@ -42,7 +42,9 @@ export default function Row({ title, fetchURL, isLargerRow }) {
           const urlParams = new URLSearchParams(new URL(url).search);
           setTrailerUrl(urlParams.get("v"));
         })
-        .catch((err) => console.log(err.message));
+        .catch((error) => {
+          return error;
+        });
     }
     return trailerUrl;
   };
@@ -58,7 +60,7 @@ export default function Row({ title, fetchURL, isLargerRow }) {
             src={`${posters_base_url}${
               isLargerRow ? movie.poster_path : movie.backdrop_path
             }`}
-            alt={movie.title}
+            alt={movie.name || movie.title}
             onClick={() => getTrailer(movie)}
           />
         ))}
