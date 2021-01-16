@@ -8,8 +8,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body::-webkit-scrollbar {
-  display: none;
-}
+    display: none;
+  }
 
   body {
     margin: 0;

@@ -11,6 +11,8 @@ export const Posters = styled.div`
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
