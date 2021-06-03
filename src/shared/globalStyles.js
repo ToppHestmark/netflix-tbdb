@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
     color: white;
     background: ${(props) => props.theme.colors.background1};
     font-family: Open-Sans, Helvetica, Sans-Serif;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    /* -ms-overflow-style: none;
+    scrollbar-width: none; */
   }
 `;
